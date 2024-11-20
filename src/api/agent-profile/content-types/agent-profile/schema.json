@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agent_profiles",
+  "info": {
+    "singularName": "agent-profile",
+    "pluralName": "agent-profiles",
+    "displayName": "AgentProfile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agent_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agent.agent",
+      "mappedBy": "agent_profile"
+    },
+    "qualification": {
+      "type": "string"
+    },
+    "institute": {
+      "type": "string"
+    },
+    "passing_year": {
+      "type": "date"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "gps": {
+      "type": "string"
+    },
+    "registration_no": {
+      "type": "string"
+    },
+    "vehicle_make": {
+      "type": "string"
+    },
+    "vehicle_model": {
+      "type": "string"
+    },
+    "power_source": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::credential.credential"
+    },
+    "ders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::der.der"
+    }
+  }
+}

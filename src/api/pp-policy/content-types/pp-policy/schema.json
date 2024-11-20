@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pp_policies",
+  "info": {
+    "singularName": "pp-policy",
+    "pluralName": "pp-policies",
+    "displayName": "pp_policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "published"
+      ],
+      "default": "active"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "geofence",
+        "privacy",
+        "alcohol"
+      ],
+      "required": true
+    },
+    "rules": {
+      "type": "json"
+    },
+    "pp_owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pp-owner.pp-owner"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "geofences": {
+      "type": "json"
+    },
+    "createdByUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "pp_policy"
+    },
+    "updatedByUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "pp_policy"
+    },
+    "policyId": {
+      "type": "uid"
+    },
+    "coverage": {
+      "type": "json"
+    },
+    "mediaMimeType": {
+      "type": "string"
+    },
+    "mediaUrl": {
+      "type": "string"
+    },
+    "applicableTo": {
+      "type": "string"
+    },
+    "pp_actions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pp-action.pp-action",
+      "mappedBy": "pp_policy"
+    }
+  }
+}

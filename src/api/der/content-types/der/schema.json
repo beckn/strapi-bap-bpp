@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ders",
+  "info": {
+    "singularName": "der",
+    "pluralName": "ders",
+    "displayName": "der",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "PROSUMER",
+        "CONSUMER"
+      ],
+      "default": "PROSUMER"
+    },
+    "proof": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "credential": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::credential.credential"
+    }
+  }
+}

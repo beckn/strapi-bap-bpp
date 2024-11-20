@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sc_product_attributes_lookups",
+  "info": {
+    "singularName": "sc-product-attributes-lookup",
+    "pluralName": "sc-product-attributes-lookups",
+    "displayName": "sc_retail_product_attributes_lookup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sc-product.sc-product"
+    },
+    "in_stock": {
+      "type": "boolean"
+    },
+    "is_variation_attribute": {
+      "type": "boolean"
+    },
+    "taxonomy": {
+      "type": "string"
+    }
+  }
+}

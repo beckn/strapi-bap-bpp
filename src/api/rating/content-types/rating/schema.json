@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "singularName": "rating",
+    "pluralName": "ratings",
+    "displayName": "Rating",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::item.item"
+    },
+    "agent_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agent.agent"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "review": {
+      "type": "text"
+    },
+    "review_date": {
+      "type": "date"
+    },
+    "customer_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "provider_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provider.provider"
+    }
+  }
+}

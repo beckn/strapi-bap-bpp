@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_methods",
+  "info": {
+    "singularName": "payment-method",
+    "pluralName": "payment-methods",
+    "displayName": "PaymentMethod",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "payment_gateway": {
+      "type": "string"
+    },
+    "gateway_url": {
+      "type": "string"
+    },
+    "bank_account_number": {
+      "type": "string"
+    },
+    "bank_code": {
+      "type": "string"
+    },
+    "bank_name": {
+      "type": "string"
+    }
+  }
+}

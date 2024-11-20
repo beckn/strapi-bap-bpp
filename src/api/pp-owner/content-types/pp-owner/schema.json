@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pp_owners",
+  "info": {
+    "singularName": "pp-owner",
+    "pluralName": "pp-owners",
+    "displayName": "pp_owner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

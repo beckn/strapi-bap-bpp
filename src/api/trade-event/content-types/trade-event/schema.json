@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trade_events",
+  "info": {
+    "singularName": "trade-event",
+    "pluralName": "trade-events",
+    "displayName": "trade_event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trade.trade",
+      "inversedBy": "trade_events"
+    },
+    "description": {
+      "type": "text"
+    },
+    "event_name": {
+      "type": "string",
+      "required": true
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cancel_terms",
+  "info": {
+    "singularName": "cancel-term",
+    "pluralName": "cancel-terms",
+    "displayName": "CancelTerm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cancel_eligible": {
+      "type": "boolean"
+    },
+    "cancel_within": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cancellation_fee": {
+      "type": "string"
+    }
+  }
+}

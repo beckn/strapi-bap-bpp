@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "short_desc": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "long_desc": {
+      "type": "text"
+    },
+    "image": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::media.media"
+    },
+    "cat_attr_tag_relations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cat-attr-tag-relation.cat-attr-tag-relation",
+      "mappedBy": "item"
+    },
+    "sc_retail_product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sc-product.sc-product",
+      "inversedBy": "item_id"
+    },
+    "service": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "item_id"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::provider.provider",
+      "inversedBy": "items"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "inversedBy": "items"
+    },
+    "max_quantity": {
+      "type": "integer"
+    },
+    "min_quantity": {
+      "type": "integer"
+    },
+    "input": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::input.input",
+      "mappedBy": "item"
+    },
+    "item_meta_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::item-meta.item-meta",
+      "inversedBy": "item"
+    },
+    "item_fulfillment_ids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item-fulfillment.item-fulfillment",
+      "mappedBy": "item_id"
+    }
+  }
+}

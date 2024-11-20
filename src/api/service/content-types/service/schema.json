@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agent_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agent.agent"
+    },
+    "time_slot_per_client_in_min": {
+      "type": "integer"
+    },
+    "service_fee": {
+      "type": "integer"
+    },
+    "followup_service_fee": {
+      "type": "integer"
+    },
+    "location_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
+    },
+    "service_availabilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-availability.service-availability",
+      "mappedBy": "service_id"
+    },
+    "service_refund_terms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-refund-term.service-refund-term"
+    },
+    "service_cancel_terms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-cancel-term.service-cancel-term"
+    },
+    "item_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::item.item",
+      "inversedBy": "service"
+    },
+    "fulfilment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fulfilment.fulfilment",
+      "mappedBy": "service"
+    }
+  }
+}

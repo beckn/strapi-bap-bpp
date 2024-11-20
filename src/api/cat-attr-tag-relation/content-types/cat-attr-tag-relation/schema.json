@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cat_attr_tag_relations",
+  "info": {
+    "singularName": "cat-attr-tag-relation",
+    "pluralName": "cat-attr-tag-relations",
+    "displayName": "Cat_Attr_Tag_relation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "taxanomy": {
+      "type": "string"
+    },
+    "taxanomy_id": {
+      "type": "string"
+    },
+    "item": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::item.item",
+      "inversedBy": "cat_attr_tag_relations"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provider.provider"
+    }
+  }
+}

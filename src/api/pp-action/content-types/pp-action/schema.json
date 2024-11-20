@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pp_actions",
+  "info": {
+    "singularName": "pp-action",
+    "pluralName": "pp-actions",
+    "displayName": "pp_action",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pp_policy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pp-policy.pp-policy",
+      "inversedBy": "pp_actions"
+    },
+    "bap_id": {
+      "type": "string"
+    },
+    "bap_uri": {
+      "type": "string"
+    },
+    "accepted_by": {
+      "type": "enumeration",
+      "enum": [
+        "bap",
+        "bpp"
+      ]
+    },
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "accept",
+        "reject"
+      ]
+    }
+  }
+}
