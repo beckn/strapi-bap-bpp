@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 15,
+      "unique": true
+    },
+    "address": {
+      "type": "text",
+      "minLength": 3
+    },
+    "zip_code": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 8
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document.document"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skill.skill"
+    },
+    "credentials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::credential.credential"
+    },
+    "distributed_supply_network_members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::distributed-supply-network-member.distributed-supply-network-member",
+      "mappedBy": "profile"
+    },
+    "utility_name": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "trades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trade.trade",
+      "mappedBy": "profile"
+    }
+  }
+}

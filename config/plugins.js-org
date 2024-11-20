@@ -1,6 +1,0 @@
-module.exports = {
-    "beckn-bpp-adapter": {
-        enabled: true,
-        resolve: "./src/plugins/plugins/beckn-bpp-adapter", // path to the plugin folder,
-    }
-};
