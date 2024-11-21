@@ -115,4 +115,3 @@ build
 yarn.lock
 
 /src/plugins
-/config/plugins.js
