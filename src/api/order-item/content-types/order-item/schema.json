@@ -14,9 +14,9 @@
   "attributes": {
     "order_id": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::order.order",
-      "inversedBy": "order_items"
+      "mappedBy": "order_items"
     },
     "item_id": {
       "type": "relation",
@@ -36,7 +36,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::order-item-meta.order-item-meta",
-      "inversedBy": "order_item_id"
+      "mappedBy": "order_item_id"
     }
   }
 }
