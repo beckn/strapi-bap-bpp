@@ -60,6 +60,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::der.der"
+    },
+    "address": {
+      "type": "text"
+    },
+    "utility_name": {
+      "type": "string"
     }
   }
 }
