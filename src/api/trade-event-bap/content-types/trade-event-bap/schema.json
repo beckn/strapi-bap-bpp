@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trade_event_baps",
+  "info": {
+    "singularName": "trade-event-bap",
+    "pluralName": "trade-event-baps",
+    "displayName": "trade_event_bap"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trade-bap.trade-bap",
+      "inversedBy": "trade_events"
+    },
+    "event_name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}

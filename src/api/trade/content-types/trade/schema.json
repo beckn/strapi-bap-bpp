@@ -36,36 +36,6 @@
       "type": "boolean",
       "default": false
     },
-    "profile": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::profile.profile",
-      "inversedBy": "trades"
-    },
-    "domain": {
-      "type": "string",
-      "required": true
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "RECEIVED",
-        "IN PROGRESS",
-        "SUCCESS",
-        "FAILED"
-      ],
-      "default": "RECEIVED",
-      "required": true
-    },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "BUY",
-        "SELL"
-      ],
-      "default": "BUY",
-      "required": true
-    },
     "agent": {
       "type": "relation",
       "relation": "manyToOne",
@@ -81,10 +51,8 @@
       "target": "api::trade-event.trade-event",
       "mappedBy": "trade"
     },
-    "order": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::order.order"
+    "price": {
+      "type": "decimal"
     }
   }
 }

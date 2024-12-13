@@ -12,41 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "order_id": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "bpp_id": {
-      "type": "string"
-    },
-    "bpp_uri": {
-      "type": "string"
-    },
-    "delivery_status": {
-      "type": "string"
-    },
-    "descriptor": {
-      "type": "json"
-    },
-    "price": {
-      "type": "decimal"
-    },
-    "billing": {
-      "type": "json"
-    },
-    "fulfillments": {
-      "type": "json"
-    },
-    "created_date": {
-      "type": "datetime"
-    },
-    "last_updated_date": {
-      "type": "datetime"
-    },
-    "quote": {
-      "type": "json"
-    },
     "status": {
       "type": "string"
     },
@@ -69,9 +34,6 @@
       "type": "string"
     },
     "transaction_id": {
-      "type": "string"
-    },
-    "message_id": {
       "type": "string"
     },
     "ip_address": {
@@ -129,15 +91,8 @@
       "type": "string",
       "required": true
     },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+    "tags": {
+      "type": "json"
     }
   }
 }
