@@ -18,12 +18,6 @@
     "current_meter_reading": {
       "type": "string",
       "required": false
-    },
-    "customer": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::customer.customer",
-      "inversedBy": "consumption_logs"
     }
   }
 }

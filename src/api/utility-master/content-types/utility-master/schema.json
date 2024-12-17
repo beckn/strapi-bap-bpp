@@ -15,12 +15,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "customers": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::customer.customer",
-      "mappedBy": "utility"
     }
   }
 }
