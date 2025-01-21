@@ -78,6 +78,12 @@
     },
     "price": {
       "type": "decimal"
+    },
+    "provider_details": {
+      "type": "json"
+    },
+    "provider_cred": {
+      "type": "json"
     }
   }
 }

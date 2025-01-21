@@ -9,8 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false,
-    "timestamps": true
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -77,6 +76,10 @@
       "relation": "oneToOne",
       "target": "api::pp-policy.pp-policy",
       "mappedBy": "updatedByUser"
+    },
+    "isOtpVerified": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
