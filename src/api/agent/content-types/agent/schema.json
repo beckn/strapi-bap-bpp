@@ -53,10 +53,16 @@
     "connection_id": {
       "type": "string"
     },
-    "trades": {
+    "sell_trades": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::trade.trade",
+      "mappedBy": "agent"
+    },
+    "buy_trades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trade-bap.trade-bap",
       "mappedBy": "agent"
     }
   }

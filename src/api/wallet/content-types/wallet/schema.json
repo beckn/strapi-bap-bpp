@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wallets",
+  "info": {
+    "singularName": "wallet",
+    "pluralName": "wallets",
+    "displayName": "Wallet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "opening_balance": {
+      "type": "decimal",
+      "min": 0
+    },
+    "closing_balance": {
+      "type": "decimal",
+      "min": 0
+    },
+    "transaction_tyoe": {
+      "type": "enumeration",
+      "enum": [
+        "ADD_FUND",
+        "WITHDRAW_FUND",
+        "SELLORDER",
+        "BUYORDER"
+      ],
+      "required": true
+    },
+    "transaction_amount": {
+      "type": "decimal"
+    }
+  }
+}

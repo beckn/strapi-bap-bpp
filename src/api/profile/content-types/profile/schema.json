@@ -62,12 +62,6 @@
     },
     "customer_id": {
       "type": "string"
-    },
-    "trades": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::trade-bap.trade-bap",
-      "mappedBy": "profile"
     }
   }
 }

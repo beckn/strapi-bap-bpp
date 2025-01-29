@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "market_statuses",
+  "info": {
+    "singularName": "market-status",
+    "pluralName": "market-statuses",
+    "displayName": "Market Status"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "OPEN",
+        "CLOSED"
+      ]
+    }
+  }
+}

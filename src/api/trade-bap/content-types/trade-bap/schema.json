@@ -32,12 +32,6 @@
       "type": "boolean",
       "default": false
     },
-    "profile": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::profile.profile",
-      "inversedBy": "trades"
-    },
     "domain": {
       "type": "string",
       "required": true
@@ -84,6 +78,12 @@
     },
     "provider_cred": {
       "type": "json"
+    },
+    "agent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agent.agent",
+      "inversedBy": "buy_trades"
     }
   }
 }
