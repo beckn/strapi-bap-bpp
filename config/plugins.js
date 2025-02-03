@@ -19,6 +19,10 @@ module.exports = ({ env }) => ({
       enabled: true,
       resolve: "./src/plugins/plugins/unified-beckn-energy", // path to the plugin folder,
     },
+    "beckn-energy-admin": {
+      enabled: true,
+      resolve: "./src/plugins/plugins/beckn-energy-admin", // path to the plugin folder,
+    },
     // "driver-app": {
     //   enabled: true,
     //   resolve: "./src/plugins/plugins/driver-app", // path to the plugin folder,

@@ -66,6 +66,14 @@
     },
     "utility_name": {
       "type": "string"
+    },
+    "cred_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "trusted_source": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

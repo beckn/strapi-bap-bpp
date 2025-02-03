@@ -19,7 +19,7 @@ module.exports= {
 
       if (ctx.request.body.data[0].context.domain === "uei:p2p_trading") {
         const tradeService = strapi
-          .plugin("beckn-trade-bap")
+          .plugin("unified-beckn-energy")
           .service("tradeService");
         try {
           await tradeService.updateTradeEventAndStatus(
