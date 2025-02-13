@@ -43,6 +43,12 @@
       "relation": "oneToMany",
       "target": "api::item-fulfillment.item-fulfillment",
       "mappedBy": "fulfilment_id"
+    },
+    "state_code": {
+      "type": "string"
+    },
+    "state_value": {
+      "type": "string"
     }
   }
 }
