@@ -78,6 +78,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::payment-method.payment-method"
+    },
+    "deg_wallet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::deg-wallet.deg-wallet",
+      "mappedBy": "provider"
     }
   }
 }

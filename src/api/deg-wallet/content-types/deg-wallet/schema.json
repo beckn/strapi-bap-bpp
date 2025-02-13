@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deg_wallets",
+  "info": {
+    "singularName": "deg-wallet",
+    "pluralName": "deg-wallets",
+    "displayName": "deg_wallet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provider.provider",
+      "inversedBy": "deg_wallet"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "deg_wallet"
+    },
+    "energy_identities_consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "energy_assets_consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "energy_transactions_consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "deg_wallet_id": {
+      "type": "string"
+    }
+  }
+}
