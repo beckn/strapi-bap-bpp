@@ -82,6 +82,9 @@
       "relation": "oneToMany",
       "target": "api::item-fulfillment.item-fulfillment",
       "mappedBy": "item_id"
+    },
+    "tag_group_id": {
+      "type": "integer"
     }
   }
 }
