@@ -85,6 +85,11 @@
     },
     "tag_group_id": {
       "type": "integer"
+    },
+    "tag_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag-group.tag-group"
     }
   }
 }
