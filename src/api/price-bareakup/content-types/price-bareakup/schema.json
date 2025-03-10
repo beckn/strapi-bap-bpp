@@ -23,6 +23,21 @@
     },
     "item_id": {
       "type": "string"
+    },
+    "price_breakup_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::price-breakup-category.price-breakup-category"
+    },
+    "is_item_qty_dependent": {
+      "type": "boolean",
+      "default": true
+    },
+    "sc_retail_product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sc-product.sc-product",
+      "inversedBy": "price_bareakup_ids"
     }
   }
 }

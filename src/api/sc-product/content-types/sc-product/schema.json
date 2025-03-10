@@ -73,7 +73,8 @@
     "price_bareakup_ids": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::price-bareakup.price-bareakup"
+      "target": "api::price-bareakup.price-bareakup",
+      "mappedBy": "sc_retail_product"
     },
     "additional_fee": {
       "type": "string"
