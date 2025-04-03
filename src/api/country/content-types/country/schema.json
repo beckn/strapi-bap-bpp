@@ -22,6 +22,12 @@
       "relation": "oneToMany",
       "target": "api::utility-company.utility-company",
       "mappedBy": "country"
+    },
+    "providers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::provider.provider",
+      "mappedBy": "country"
     }
   }
 }
