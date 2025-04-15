@@ -2,11 +2,11 @@
  * A set of functions called "actions" for `webhook`
  */
 
-module.exports= {
+module.exports = {
   updateOrder: async (ctx, next) => {
     try {
       const requiredOrder = await strapi.entityService.findMany(
-        "api::order.order",
+        "api::order-bap.order-bap",
         {
           filters: {
             order_id: ctx.request.body?.data?.[0]?.message?.order?.id,
@@ -37,7 +37,7 @@ module.exports= {
         .service("api::order.order")
         .buildData({ ...ctx.request.body.data[0] });
       const updatedResponse = await strapi.entityService.update(
-        "api::order.order",
+        "api::order-bap.order-bap",
         requiredOrder[0].id,
         {
           data: builtOrder,
