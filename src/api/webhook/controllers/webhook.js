@@ -34,7 +34,7 @@ module.exports = {
       ctx.request.body.data[0].message.order.state =
         ctx.request.body?.data?.[0]?.message?.order?.fulfillments?.[0]?.state?.descriptor?.short_desc;
       const builtOrder = strapi
-        .service("api::order.order")
+        .service("api::order-bap.order-bap")
         .buildData({ ...ctx.request.body.data[0] });
       console.log("=====>Built Order", JSON.stringify(builtOrder, null, 2));
       const updatedResponse = await strapi.entityService.update(
