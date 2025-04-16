@@ -42,10 +42,10 @@ module.exports = ({ env }) => ({
         },
       },
     },
-    // "unsolicited-request-plugin": {
-    //   enabled: true,
-    //   resolve: "./src/plugins/plugins/unsolicited-request-plugin",
-    // },
+    "unsolicited-request-plugin": {
+      enabled: true,
+      resolve: "./src/plugins/plugins/unsolicited-request-plugin",
+    },
     // 'policy-api': {
     //   enabled: true,
     //   resolve: './src/plugins/plugins/policy-api'
