@@ -50,7 +50,7 @@
       "target": "api::order-tracking.order-tracking"
     },
     "quantity": {
-      "type": "integer"
+      "type": "float"
     }
   }
 }
