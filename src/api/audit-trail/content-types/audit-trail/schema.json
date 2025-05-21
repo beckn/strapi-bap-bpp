@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audit_trails",
+  "info": {
+    "singularName": "audit-trail",
+    "pluralName": "audit-trails",
+    "displayName": "audit-trail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meter_id": {
+      "type": "string"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "dfp_accepted": {
+      "type": "boolean",
+      "default": true
+    },
+    "current_consumption_kwh": {
+      "type": "float"
+    },
+    "consumption_change_percentage": {
+      "type": "decimal"
+    }
+  }
+}
