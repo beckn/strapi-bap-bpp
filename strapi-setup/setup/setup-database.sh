@@ -1,4 +1,4 @@
-docker-compose -f mysql-docker-compose.yml up -d
+docker-compose -f strapi-setup/setup/mysql-docker-compose.yml up -d
 
 # Wait for MySQL to be ready
 echo "Waiting for MySQL Database to be ready..."
