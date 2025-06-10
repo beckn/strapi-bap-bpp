@@ -1,0 +1,32 @@
+Steps for subscribe:
+
+1. User Signup
+
+
+2. Create a curl URL that will call /subscribe endpoint of strapi that will be called using Postman. and payload {
+							  "subscriber_id": "example.com",
+							  "country": "string",
+							  "city": "string",
+							  "domain": "string",
+							  "signing_public_key": "string",
+							  "encr_public_key": "string",
+							  "valid_from": "2025-03-18T07:24:37.979Z",
+							  "valid_until": "2025-03-18T07:24:37.979Z",
+							  "nonce": "string"
+							}
+	1. Strapi will lookup in DeDi for this entry
+	2. If entry present and Status is subscribed, will send {message:"already subscriber"} as response.
+	3. Else if entry is present and status is INITIATED
+		1. then will call https://{subscriber_url}/on_subscribe with payload {subscriber_id:"", challenge:"Random String Generated on strapi"}
+		2. On protocol server there will be an endpoint /on_subscribe and it will check subscriber_id in the payload matches with its subscriber_id stored in default.yml and then will encrypt the challenge with sigining_private_key and will send as response in this structure. { answer: "" }
+		3. This answer will be received as response on strapi. Then it will create again decrypt the challenge with public key of that subscriber and match with the random string generated
+		4. Update the record in DeDi for that subscriber_id with status as SUBSCRIBED
+	4. Else if entry only is not present
+		1. Then on backend strapi will verify SSL of subscriber_URL
+		2. Will check the verify-website.html
+		3. Create an entry in DeDi with status as INITIATED
+		4. Will link that subscriber_id and DeDi id in the strapi DB
+		5. then will call https://{subscriber_url}/on_subscribe with payload {subscriber_id:"", challenge:"Random String Generated on strapi"}
+		6. On protocol server there will be an endpoint /on_subscribe and it will check subscriber_id in the payload matches with its subscriber_id stored in default.yml and then will encrypt the challenge with sigining_private_key and will send as response in this structure. { answer: "" }
+		7. This answer will be received as response on strapi. Then it will create again decrypt the challenge with public key of that subscriber and match with the random string generated
+		8. Update the record in DeDi for that subscriber_id with status as SUBSCRIBED	
