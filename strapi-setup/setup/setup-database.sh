@@ -6,7 +6,7 @@ while ! docker exec mysql-container mysqladmin ping -h localhost -u root -proot 
     sleep 1
 done
 echo "MySQL is ready!"
-sleep 5
+sleep 10
 
 docker exec -i mysql-container mysql -uroot -proot -e "DROP USER IF EXISTS 'root'@'%'; CREATE USER 'root'@'%' IDENTIFIED BY 'root'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 
